@@ -1,23 +1,12 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react'
+import ModelList from './components/ModelList'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img
-            src={"https://static.sketchfab.com/img/press/logos/logo.png"}
-            className="App-logo"
-            alt="logo"
-          />
-          <p>
-            Welcome to the <code>Tech/Frontend</code> exercise.
-          </p>
-        </header>
-      </div>
-    );
-  }
+const App: React.FC = () => {
+  return (
+    <>
+      <ModelList />
+    </>
+  )
 }
 
-export default App;
+export default App
