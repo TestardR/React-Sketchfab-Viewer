@@ -1,8 +1,6 @@
-import React, { useRef, useEffect, useState } from 'react';
-// @ts-ignore
-/* import Sketchfab from '@sketchfab/viewer-api'; */
-
+import React from 'react';
 import ModelItemStyles from './model-item.styles';
+import { Link } from 'react-router-dom';
 
 interface IProps {
   result: {
@@ -15,41 +13,30 @@ interface IProps {
 }
 
 const ModelItem: React.FC<IProps> = ({ result }) => {
-  const iframeRef = useRef(null);
-
-/*   useEffect(() => {
-    if (iframeRef.current) {
-      const { uid } = result;
-      const iframe = iframeRef.current;
-      const client = new Sketchfab('1.7.1', iframe);
-
-      client.init(uid, {
-        success: function onSuccess(api: any) {
-          api.start();
-          api.addEventListener('viewerready', function () {
-            console.log('Viewer is ready');
-          });
-        },
-        error: function onError() {
-          console.log('Viewer error');
-        },
-      });
-    }
-  }, [iframeRef]); */
-
+  const {
+    thumbnails: { images },
+    uid,
+    name,
+  } = result;
   return (
     <ModelItemStyles>
       <div className="card">
         <button
           onClick={() => {
-            console.log('clicked')
+            console.log('clicked');
           }}
         >
-          {result.thumbnails.images && (
-            <img src={result.thumbnails.images[1].url} className="image" />
-          )}
+          {images && <img src={images[1].url} className="image" />}
         </button>
-        <div>{result.name}</div>
+        <div>{name}</div>
+        <Link
+          to={{
+            pathname: `/model/${uid}`,
+            state: result,
+          }}
+        >
+          Viewer
+        </Link>
       </div>
     </ModelItemStyles>
   );
