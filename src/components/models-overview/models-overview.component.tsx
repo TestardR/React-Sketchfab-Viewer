@@ -34,9 +34,11 @@ const ModelsOverview: React.FC = () => {
 
   return (
     <ModelsOverviewStyles>
-      Model List
       <div className="wrapper">
-        {renderModelItem(response, error, isLoading)}
+        <div className="title">Random Models</div>
+        <div className="items">
+          {renderModelItem(response, error, isLoading)}
+        </div>
       </div>
     </ModelsOverviewStyles>
   );
