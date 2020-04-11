@@ -32,6 +32,7 @@ const ModelList: React.FC = () => {
     }
   };
 
+  console.log(response)
   return (
     <ModelListStyles>
       Model List
