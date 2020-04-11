@@ -1,12 +1,15 @@
-import React from 'react'
-import ModelList from './components/ModelList'
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import HomePage from './pages/homepage.component';
 
 const App: React.FC = () => {
   return (
-    <>
-      <ModelList />
-    </>
-  )
-}
+    <Router>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+      </Switch>
+    </Router>
+  );
+};
 
-export default App
+export default App;

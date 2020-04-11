@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ModelListStyles = styled.div`
+const ModelsOverviewStyles = styled.div`
   .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -8,4 +8,4 @@ const ModelListStyles = styled.div`
   }
 `;
 
-export default ModelListStyles;
+export default ModelsOverviewStyles;

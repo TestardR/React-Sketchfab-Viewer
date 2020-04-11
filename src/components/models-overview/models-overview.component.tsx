@@ -1,9 +1,9 @@
 import React from 'react';
-import useFetch from '../hooks/useFetch';
-import ModelItem from './ModelItem';
-import ModelListStyles from '../styles/ModelListStyles';
+import useFetch from '../../hooks/useFetch';
+import ModelItem from '../model-item/model-item.component';
+import ModelsOverviewStyles from './models-overview.styles';
 
-const ModelList: React.FC = () => {
+const ModelsOverview: React.FC = () => {
   const uri = 'https://api.sketchfab.com/v3/search?type=models';
   const options = {
     method: 'get',
@@ -32,15 +32,14 @@ const ModelList: React.FC = () => {
     }
   };
 
-  console.log(response)
   return (
-    <ModelListStyles>
+    <ModelsOverviewStyles>
       Model List
       <div className="wrapper">
         {renderModelItem(response, error, isLoading)}
       </div>
-    </ModelListStyles>
+    </ModelsOverviewStyles>
   );
 };
 
-export default ModelList;
+export default ModelsOverview;
