@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderStyles from './header.styles';
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <HeaderStyles>
       <div className="header">

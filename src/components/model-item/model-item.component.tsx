@@ -1,7 +1,8 @@
 import React from 'react';
 import ModelItemStyles from './model-item.styles';
 import { Link } from 'react-router-dom';
-import ThumbIcon from '../thumb-icon/thumb-icon.component';
+import ThumbIcon from '../thumb/thumb-icon/thumb-icon.component';
+import ThumbButton from '../thumb/thumb-button/thumb-button.component';
 
 interface IProps {
   result: {
@@ -22,7 +23,6 @@ interface IProps {
 }
 
 const ModelItem: React.FC<IProps> = ({ result }) => {
-  console.log(result);
   const {
     thumbnails: { images },
     uid,
@@ -64,7 +64,7 @@ const ModelItem: React.FC<IProps> = ({ result }) => {
             <div className="">Comments: {commentCount}</div>
             <div className="">Views: {viewCount}</div>
           </div>
-          <ThumbIcon />
+          <ThumbButton />
         </div>
       </div>
     </ModelItemStyles>

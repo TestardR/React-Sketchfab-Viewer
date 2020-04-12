@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import useViewer from '../../hooks/useViewer';
 
-const MoldelViewer = ({ location }: any) => {
+const MoldelViewer: React.FC = ({ location }: any) => {
   const { state } = location;
   const { uid } = state;
   const { iframeRef } = useViewer(uid);

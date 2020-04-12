@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 
-interface Ioptions {
+interface IOptions {
   method: string;
   headers: {
     Authorization: string;
   };
 }
 
-const useFetch = (url: string, options: Ioptions) => {
+const useFetch = (url: string, options: IOptions) => {
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);

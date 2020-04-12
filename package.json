@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mojs/core": "^0.288.2",
     "@sketchfab/viewer-api": "^1.7.1",
     "@types/jest": "^25.1.2",
     "@types/node": "^13.7.1",
