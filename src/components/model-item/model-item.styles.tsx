@@ -11,6 +11,30 @@ const ModelItemStyles = styled.div`
     overflow: hidden;
   }
 
+  .primary-group {
+    position: relative;
+  }
+
+  .primary-group .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease-in;
+    background-color: #1AAAD9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .overlay:hover {
+    opacity: 0.3;
+  }
+
   .link {
     width: 100%;
     text-decoration: none;
@@ -30,11 +54,21 @@ const ModelItemStyles = styled.div`
       height: 10%;
       padding-right: 5px;
     }
+
     .name {
     }
+
   }
 
-  .data {
+  .logo {
+    height: 50%;
+    /* padding-right: 0.5rem;
+    @media screen and (min-width: 600px) {
+      width: 50px;
+    } */
+  }
+
+  .info {
     padding: 10px;
     display: flex;
   }

@@ -1,7 +1,6 @@
 import React from 'react';
 import ModelItemStyles from './model-item.styles';
 import { Link } from 'react-router-dom';
-import { userInfo } from 'os';
 
 interface IProps {
   result: {
@@ -33,23 +32,32 @@ const ModelItem: React.FC<IProps> = ({ result }) => {
   return (
     <ModelItemStyles>
       <div className="card">
-        <Link
-          to={{
-            pathname: `/model/${uid}`,
-            state: result,
-          }}
-          className="link"
-        >
-          {images && <img src={images[1].url} className="image" />}
-          <div className="content">
-            {avatar && <img src={avatar.images[1].url} className="image" />}
-            <div className="name">{name}</div>
-          </div>
-          <div className="data">
-            <div className="">Comments: {commentCount}</div>
-            <div className="">Views: {viewCount}</div>
-          </div>
-        </Link>
+        <div className="primary-group">
+          <Link
+            to={{
+              pathname: `/model/${uid}`,
+              state: result,
+            }}
+            className="link"
+          >
+            {images && <img src={images[1].url} className="image" />}
+            <div className="content">
+              {avatar && <img src={avatar.images[1].url} className="image" />}
+              <div className="name">{name}</div>
+            </div>
+            <div className="overlay">
+              <img
+                src={'https://static.sketchfab.com/img/press/logos/logo.png'}
+                className="logo"
+                alt="logo"
+              />
+            </div>
+          </Link>
+        </div>
+        <div className="info">
+          <div className="">Comments: {commentCount}</div>
+          <div className="">Views: {viewCount}</div>
+        </div>
       </div>
     </ModelItemStyles>
   );
