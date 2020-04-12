@@ -9,6 +9,7 @@ const ModelItemStyles = styled.div`
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
     overflow: hidden;
+    padding-bottom: 1rem;
   }
 
   .primary-group {
@@ -47,30 +48,37 @@ const ModelItemStyles = styled.div`
 
   .content {
     display: flex;
-    padding: 10px;
+    padding: 0.5rem 1rem;
+    align-items: center;
 
     .image {
-      width: 10%;
-      height: 10%;
-      padding-right: 5px;
+      width: 15%;
+      height: 15%;
+      border-radius: 50%;
+      margin-right: 0.8rem;
     }
 
     .name {
+      color: black;
+      font-size: 1rem;
     }
 
+    .username {
+      color: black;
+      font-weight: 300;
+      font-size: 0.8rem;
+    }
   }
 
   .logo {
     height: 50%;
-    /* padding-right: 0.5rem;
-    @media screen and (min-width: 600px) {
-      width: 50px;
-    } */
   }
 
   .info {
-    padding: 10px;
+    padding: 0.5rem 1rem;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 `;
 
