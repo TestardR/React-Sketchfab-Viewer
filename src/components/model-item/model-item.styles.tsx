@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const ModelItemStyles = styled.div`
   .card {
     width: 280px;
-    height: 300px;
+    height: 85%;
     margin: 10px;
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -26,7 +26,7 @@ const ModelItemStyles = styled.div`
     width: 100%;
     opacity: 0;
     transition: 0.5s ease-in;
-    background-color: #1AAAD9;
+    background-color: #1aaad9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,6 +79,16 @@ const ModelItemStyles = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .group {
+    display: flex;
+    color: lightgray;
+  }
+
+  .item {
+    display: flex;
+    padding-right: 10px;
   }
 `;
 

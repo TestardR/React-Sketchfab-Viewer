@@ -1,8 +1,10 @@
 import React from 'react';
-import ModelItemStyles from './model-item.styles';
 import { Link } from 'react-router-dom';
-import ThumbIcon from '../thumb/thumb-icon/thumb-icon.component';
+
+import ModelItemStyles from './model-item.styles';
 import ThumbButton from '../thumb/thumb-button/thumb-button.component';
+import CommentIcon from '../comment-icon/comment-icon.component';
+import ViewIcon from '../view-icon/view-icon.component';
 
 interface IProps {
   result: {
@@ -60,9 +62,15 @@ const ModelItem: React.FC<IProps> = ({ result }) => {
           </Link>
         </div>
         <div className="info">
-          <div className="feedback">
-            <div className="">Comments: {commentCount}</div>
-            <div className="">Views: {viewCount}</div>
+          <div className="group">
+            <div className="item">
+              <CommentIcon />
+              {commentCount}
+            </div>
+            <div className="item">
+              <ViewIcon />
+              {viewCount}
+            </div>
           </div>
           <ThumbButton />
         </div>
