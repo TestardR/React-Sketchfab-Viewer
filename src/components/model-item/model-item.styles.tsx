@@ -10,6 +10,7 @@ const ModelItemStyles = styled.div`
     border-radius: 4px;
     overflow: hidden;
     padding-bottom: 1rem;
+    border-bottom: 4px solid #1AAAD9;
   }
 
   .primary-group {
