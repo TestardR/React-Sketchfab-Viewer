@@ -13,6 +13,10 @@ const ThumbCountSyles = styled.div`
     width: 28px;
     line-height: 28px;
   }
+
+  .styled {
+    background: #FDBF02;
+  }
 `;
 
 export default ThumbCountSyles;

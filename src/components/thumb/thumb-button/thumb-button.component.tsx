@@ -8,13 +8,17 @@ import ThumbTotal from '../thumb-total/thumb-total.component';
 import useClapAnimation from '../../../hooks/useThumbAnimation';
 import useDOMRef from '../../../hooks/useDOMRef';
 
+interface IProps {
+  styles?: boolean;
+}
+
 const initialState = {
   count: 0,
   countTotal: 267,
   isClicked: false,
 };
 
-const ThumbButton: React.FC = () => {
+const ThumbButton: React.FC<IProps> = ({ styles }) => {
   const MAXIMUM_USER_CLAP = 50;
   const [thumbState, setThumbState] = useState(initialState);
   const { count, countTotal, isClicked } = thumbState;
@@ -50,8 +54,8 @@ const ThumbButton: React.FC = () => {
         data-refkey="thumbRef"
         onClick={handleClapClick}
       >
-        <ThumbIcon isClicked={isClicked} />
-        <ThumbCount count={count} setRef={setRef} />
+        <ThumbIcon isClicked={isClicked} styles={styles} />
+        <ThumbCount count={count} setRef={setRef} styles={styles} />
         <ThumbTotal countTotal={countTotal} setRef={setRef} />
       </button>
     </ThumbButtonStyles>

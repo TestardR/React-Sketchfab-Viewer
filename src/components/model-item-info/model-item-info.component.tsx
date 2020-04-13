@@ -7,7 +7,7 @@ import ModelItemInfoStyles from './model-item-info.styles';
 interface IProps {
   commentCount: number;
   viewCount: number;
-  styles?: string;
+  styles?: boolean;
 }
 
 const ModelItemInfo: React.FC<IProps> = ({
@@ -28,7 +28,7 @@ const ModelItemInfo: React.FC<IProps> = ({
               {viewCount}
             </div>
           </div>
-          <ThumbButton />
+          <ThumbButton styles={styles} />
         </div>
     </ModelItemInfoStyles>
   );

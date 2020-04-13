@@ -13,6 +13,19 @@ const ThumbIconStyles = styled.div`
     stroke: #fff;
     stroke-width: 1px;
   }
+
+  .styled {
+    width: 35px;
+    fill: none;
+    stroke: #FDBF02;
+    stroke-width: 20px;
+  }
+
+  .fill {
+    fill: #FDBF02;
+    stroke: #fff;
+    stroke-width: 1px;
+  }
 `;
 
 export default ThumbIconStyles;

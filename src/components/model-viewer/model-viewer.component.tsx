@@ -23,7 +23,7 @@ const MoldelViewer: React.FC<IProps> = ({ location }) => {
       <div className="container">
         <div className="iframe-container">
           <iframe src="" ref={iframeRef}></iframe>
-          <ModelItemInfo commentCount={commentCount} viewCount={viewCount} />
+          <ModelItemInfo commentCount={commentCount} viewCount={viewCount} styles={true} />
         </div>
       </div>
     </ModelViewerStyles>
