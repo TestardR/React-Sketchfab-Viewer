@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import ModelItemStyles from './model-item.styles';
 import ModelItemInfo from '../model-item-info/model-item-info.component';
+import UserInfo from '../user-info/user-info.component';
 
 interface IProps {
   result: {
@@ -43,13 +44,7 @@ const ModelItem: React.FC<IProps> = ({ result }) => {
             className="link"
           >
             {images && <img src={images[1].url} className="image" />}
-            <div className="content">
-              {avatar && <img src={avatar.images[1].url} className="image" />}
-              <div className="content-info">
-                <div className="name">{name}</div>
-                <div className="username">{username}</div>
-              </div>
-            </div>
+            <UserInfo avatar={avatar} name={name} username={username} />
             <div className="overlay">
               <img
                 src={'https://static.sketchfab.com/img/press/logos/logo.png'}

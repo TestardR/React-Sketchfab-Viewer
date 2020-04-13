@@ -47,30 +47,6 @@ const ModelItemStyles = styled.div`
     height: 140px;
   }
 
-  .content {
-    display: flex;
-    padding: 0.5rem 1rem;
-    align-items: center;
-
-    .image {
-      width: 15%;
-      height: 15%;
-      border-radius: 50%;
-      margin-right: 0.8rem;
-    }
-
-    .name {
-      color: black;
-      font-size: 1rem;
-    }
-
-    .username {
-      color: black;
-      font-weight: 300;
-      font-size: 0.8rem;
-    }
-  }
-
   .logo {
     height: 50%;
   }

@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 const ModelViewerStyles = styled.div`
   .container {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    padding-bottom: 5rem;
     display: flex;
     align-items: center;
     flex-direction: column;

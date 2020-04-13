@@ -17,7 +17,7 @@ const ModelItemInfo: React.FC<IProps> = ({
 }) => {
   return (
     <ModelItemInfoStyles>
-        <div className="info">
+        <div className={styles ? 'styled-info' : 'info'}>
           <div className="group">
             <div className="item">
               <CommentIcon />

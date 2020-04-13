@@ -8,6 +8,13 @@ const ModelItemInfoStyles = styled.div`
     align-items: center;
   }
 
+  .styled-info {
+    padding: 0rem 1rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .group {
     display: flex;
     color: lightgray;
