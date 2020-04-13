@@ -8,6 +8,10 @@ const ThumbButtonStyles = styled.div`
     outline: 0;
   }
 
+  button::-moz-focus-inner {
+    border: 0;
+  }
+
   .button:hover {
     cursor: pointer;
   }
