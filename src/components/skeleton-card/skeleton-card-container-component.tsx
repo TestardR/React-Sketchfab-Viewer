@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 import _ from 'lodash';
 
 import SketelonCard from './skeleton-card.component';
