@@ -1,16 +1,32 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import useViewer from '../../hooks/useViewer';
+import ModelViewerStyles from './model-viewer.styles';
+import ModelItemInfo from '../model-item-info/model-item-info.component';
 
-const MoldelViewer: React.FC = ({ location }: any) => {
+interface IProps {
+  location: {
+    state: {
+      uid: string;
+      commentCount: number;
+      viewCount: number;
+    };
+  };
+}
+
+const MoldelViewer: React.FC<IProps> = ({ location }) => {
   const { state } = location;
-  const { uid } = state;
+  const { uid, commentCount, viewCount } = state;
   const { iframeRef } = useViewer(uid);
 
   return (
-    <div>
-      model viewer
-      <iframe src="" ref={iframeRef}></iframe>
-    </div>
+    <ModelViewerStyles>
+      <div className="container">
+        <div className="iframe-container">
+          <iframe src="" ref={iframeRef}></iframe>
+          <ModelItemInfo commentCount={commentCount} viewCount={viewCount} />
+        </div>
+      </div>
+    </ModelViewerStyles>
   );
 };
 

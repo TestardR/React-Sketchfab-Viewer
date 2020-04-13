@@ -74,23 +74,6 @@ const ModelItemStyles = styled.div`
   .logo {
     height: 50%;
   }
-
-  .info {
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .group {
-    display: flex;
-    color: lightgray;
-  }
-
-  .item {
-    display: flex;
-    padding-right: 10px;
-  }
 `;
 
 export default ModelItemStyles;

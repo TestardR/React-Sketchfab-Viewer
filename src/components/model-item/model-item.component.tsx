@@ -2,9 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import ModelItemStyles from './model-item.styles';
-import ThumbButton from '../thumb/thumb-button/thumb-button.component';
-import CommentIcon from '../comment-icon/comment-icon.component';
-import ViewIcon from '../view-icon/view-icon.component';
+import ModelItemInfo from '../model-item-info/model-item-info.component';
 
 interface IProps {
   result: {
@@ -61,19 +59,7 @@ const ModelItem: React.FC<IProps> = ({ result }) => {
             </div>
           </Link>
         </div>
-        <div className="info">
-          <div className="group">
-            <div className="item">
-              <CommentIcon />
-              {commentCount}
-            </div>
-            <div className="item">
-              <ViewIcon />
-              {viewCount}
-            </div>
-          </div>
-          <ThumbButton />
-        </div>
+        <ModelItemInfo commentCount={commentCount} viewCount={viewCount} />
       </div>
     </ModelItemStyles>
   );
