@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ModelsOverviewStyles = styled.div`
+const ModelsPageStyles = styled.div`
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -29,4 +29,4 @@ const ModelsOverviewStyles = styled.div`
   }
 `;
 
-export default ModelsOverviewStyles;
+export default ModelsPageStyles;

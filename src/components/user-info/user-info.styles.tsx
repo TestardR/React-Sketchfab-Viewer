@@ -14,13 +14,6 @@ const UserInfoStyles = styled.div`
     margin-right: 0.8rem;
   }
 
-  .styled-avatar {
-    width: 5%;
-    height: 5%;
-    border-radius: 50%;
-    margin-right: 0.8rem;
-  }
-
   .name {
     color: black;
     font-size: 1rem;
