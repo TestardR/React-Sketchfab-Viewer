@@ -5,6 +5,7 @@ const ThumbButtonStyles = styled.div`
     border: none;
     background: none;
     user-select: none;
+    outline: 0;
   }
 
   .button:hover {
