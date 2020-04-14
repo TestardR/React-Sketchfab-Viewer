@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ViewIconStyles = styled.div`
+const CommonIconStyles = styled.div`
   .icon {
     width: 25px;
     color: lightgray;
@@ -8,4 +8,4 @@ const ViewIconStyles = styled.div`
   }
 `;
 
-export default ViewIconStyles;
+export default CommonIconStyles;

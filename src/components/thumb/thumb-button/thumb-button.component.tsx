@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState } from 'react';
 import ThumbButtonStyles from './thumb-button.styles';
 import ThumbIcon from '../thumb-icon/thumb-icon.component';
 import ThumbCount from '../thumb-count/thumb-count.component';
 import ThumbTotal from '../thumb-total/thumb-total.component';
-
 import useClapAnimation from '../../../hooks/useThumbAnimation';
 import useDOMRef from '../../../hooks/useDOMRef';
 
@@ -19,21 +17,20 @@ const initialState = {
 };
 
 const ThumbButton: React.FC<IProps> = ({ styles }) => {
-  const MAXIMUM_USER_CLAP = 50;
+  const MAXIMUM_USER_CLAP = 20;
   const [thumbState, setThumbState] = useState(initialState);
   const { count, countTotal, isClicked } = thumbState;
 
   // @ts-ignore
   const [{ thumbRef, countRef, countTotalRef }, setRef] = useDOMRef();
 
-  /*  */ let animationTimeline = useClapAnimation({
+ const animationTimeline = useClapAnimation({
     thumbEl: thumbRef,
     countEl: countRef,
     countTotalEl: countTotalRef,
   });
 
   const handleClapClick = () => {
-    // @ts-ignore
     animationTimeline.replay();
     setThumbState((prevState) => ({
       isClicked: true,

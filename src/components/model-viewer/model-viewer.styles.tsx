@@ -10,10 +10,11 @@ const ModelViewerStyles = styled.div`
   }
 
   .iframe-container {
-    width: 80%;
+    width: 95%;
     height: 150px;
     @media screen and (min-width: 768px) {
       height: 500px;
+      width: 80%;
     }
     @media screen and (min-width: 1024px) {
       height: 700px;

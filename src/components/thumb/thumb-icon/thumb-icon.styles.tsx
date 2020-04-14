@@ -1,11 +1,20 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const baseIconStyles = css`
+  width: 35px;
+  fill: none;
+  stroke-width: 20px;
+`;
 
 const ThumbIconStyles = styled.div`
   .icon {
-    width: 35px;
-    fill: none;
+    ${baseIconStyles}
     stroke: #1aaad9;
-    stroke-width: 20px;
+  }
+
+  .viewer-icon {
+    ${baseIconStyles}
+    stroke: #FDBF02;
   }
 
   .checked {
@@ -14,15 +23,8 @@ const ThumbIconStyles = styled.div`
     stroke-width: 1px;
   }
 
-  .styled {
-    width: 35px;
-    fill: none;
-    stroke: #FDBF02;
-    stroke-width: 20px;
-  }
-
-  .fill {
-    fill: #FDBF02;
+  .viewer-checked {
+    fill: #fdbf02;
     stroke: #fff;
     stroke-width: 1px;
   }

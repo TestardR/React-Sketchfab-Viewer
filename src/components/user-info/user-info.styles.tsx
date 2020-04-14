@@ -1,4 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const baseAvatarStyles = css`
+  border-radius: 50%;
+  margin-right: 0.8rem;
+`;
 
 const UserInfoStyles = styled.div`
   .content {
@@ -8,17 +13,15 @@ const UserInfoStyles = styled.div`
   }
 
   .avatar {
+    ${baseAvatarStyles}
     width: 15%;
     height: 15%;
-    border-radius: 50%;
-    margin-right: 0.8rem;
   }
 
-  .styled-avatar {
-    width: 5%;
-    height: 5%;
-    border-radius: 50%;
-    margin-right: 0.8rem;
+  .small-avatar {
+    ${baseAvatarStyles}
+    width: 40px;
+    height: 40px;
   }
 
   .name {

@@ -17,7 +17,7 @@ const UserInfo: React.FC<IProps> = ({ avatar, name, username, styles }) => {
         {avatar && (
           <img
             src={avatar.images[1].url}
-            className={styles ? 'styled-avatar' : 'avatar'}
+            className={styles ? 'small-avatar' : 'avatar'}
           />
         )}
         <div>

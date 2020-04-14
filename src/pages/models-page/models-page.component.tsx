@@ -1,9 +1,9 @@
 import React, { Suspense, lazy } from 'react';
-import { useSuspense } from '../hooks/useSuspense';
+import { useSuspense } from '../../hooks/useSuspense';
 import ModelsPageStyles from './models-page.styles';
-import SkeletonCardContainer from '../components/skeleton-card/skeleton-card-container-component';
+import SkeletonCardContainer from '../../components/skeleton-card/skeleton-card-container-component';
 const ModelsOverview = lazy(() =>
-  import('../components/models-overview/models-overview.component')
+  import('../../components/models-overview/models-overview.component')
 );
 
 const ModelsPage = () => {

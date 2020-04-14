@@ -1,6 +1,6 @@
 import React from 'react';
-import CommentIcon from '../comment-icon/comment-icon.component';
-import ViewIcon from '../view-icon/view-icon.component';
+import CommentIcon from '../icons/comment-icon/comment-icon.component';
+import ViewIcon from '../icons/view-icon/view-icon.component';
 import ThumbButton from '../thumb/thumb-button/thumb-button.component';
 import ModelItemInfoStyles from './model-item-info.styles';
 

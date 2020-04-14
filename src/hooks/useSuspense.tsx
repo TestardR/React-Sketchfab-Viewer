@@ -11,21 +11,21 @@ const fetchData = async (url: string, options: IOptions) => {
     const json = await res.json();
     return json;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };
 
-const wrapPromise = (promise: any) => {
+const wrapPromise = (promise: Promise<any>) => {
   let status = 'pending';
   let result = '';
   let suspender = promise
-    .then((r: any) => {
+    .then((res: any) => {
       status = 'success';
-      result = r;
+      result = res;
     })
-    .catch((e: any) => {
+    .catch((err: any) => {
       status = 'error';
-      result = e;
+      result = err;
     });
 
   return {

@@ -1,9 +1,9 @@
 import React from 'react';
-import CommentIconStyles from './comment-icon.styles';
+import CommonIconStyles from '../common-icon.styles';
 
 const CommentIcon = () => {
   return (
-    <CommentIconStyles>
+    <CommonIconStyles>
       <span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +16,7 @@ const CommentIcon = () => {
           ></path>
         </svg>
       </span>
-    </CommentIconStyles>
+    </CommonIconStyles>
   );
 };
 

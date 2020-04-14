@@ -7,8 +7,8 @@ interface IProps {
 }
 
 const ThumbIcon: React.FC<IProps> = ({ isClicked, styles }) => {
-  const className = `${styles ? 'styled' : 'icon'} ${
-    isClicked && styles && 'fill'
+  const className = `${styles ? 'viewer-icon' : 'icon'} ${
+    isClicked && styles && 'viewer-checked'
   } ${isClicked && 'checked'} `;
 
   return (

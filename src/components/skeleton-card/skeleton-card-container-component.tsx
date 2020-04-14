@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, memo } from 'react';
 import _ from 'lodash';
 
 import SketelonCard from './skeleton-card.component';
@@ -7,7 +7,7 @@ interface IProps {
   n: number;
 }
 
-const SkeletonCardContainer: React.FC<IProps> = ({ n }) => {
+const SkeletonCardContainer: React.FC<IProps> = memo(({ n }) => {
   return (
     <Fragment>
       {_.times(n, (i) => (
@@ -16,6 +16,6 @@ const SkeletonCardContainer: React.FC<IProps> = ({ n }) => {
       <SketelonCard />
     </Fragment>
   );
-};
+});
 
 export default SkeletonCardContainer;

@@ -1,18 +1,21 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const baseModelInfoStyles = css`
+  display: flex;
+  align-items: center;
+`;
 
 const ModelItemInfoStyles = styled.div`
   .info {
     padding: 0.5rem 1rem;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
+    ${baseModelInfoStyles}
   }
 
   .styled-info {
     padding: 0rem 1rem 5rem;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
+    ${baseModelInfoStyles}
   }
 
   .group {

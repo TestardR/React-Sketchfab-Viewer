@@ -1,9 +1,9 @@
 import React from 'react';
-import ViewIconStyles from './view-icon.styles';
+import CommonIconStyles from '../common-icon.styles';
 
 const ViewIcon = () => {
   return (
-    <ViewIconStyles>
+    <CommonIconStyles>
       <span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +16,7 @@ const ViewIcon = () => {
           ></path>
         </svg>
       </span>
-    </ViewIconStyles>
+    </CommonIconStyles>
   );
 };
 

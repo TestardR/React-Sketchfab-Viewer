@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import ModelItemStyles from './model-item.styles';
 import ModelItemInfo from '../model-item-info/model-item-info.component';
 import UserInfo from '../user-info/user-info.component';
@@ -35,7 +34,7 @@ const ModelItem: React.FC<IProps> = ({ result }) => {
   return (
     <ModelItemStyles>
       <div className="card">
-        <div className="primary-group">
+        <div className="group">
           <Link
             to={{
               pathname: `/model/${uid}`,
