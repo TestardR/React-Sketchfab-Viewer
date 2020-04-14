@@ -24,7 +24,7 @@ const ThumbButton: React.FC<IProps> = ({ styles }) => {
   // @ts-ignore
   const [{ thumbRef, countRef, countTotalRef }, setRef] = useDOMRef();
 
- const animationTimeline = useClapAnimation({
+  const animationTimeline = useClapAnimation({
     thumbEl: thumbRef,
     countEl: countRef,
     countTotalEl: countTotalRef,

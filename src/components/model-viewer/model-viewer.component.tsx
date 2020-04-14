@@ -4,17 +4,19 @@ import ModelViewerStyles from './model-viewer.styles';
 import ModelItemInfo from '../model-item-info/model-item-info.component';
 import UserInfo from '../user-info/user-info.component';
 
+interface IUser {
+  avatar: {
+    images: any[];
+  };
+  username: string;
+}
+
 interface IProps {
   location: {
     state: {
       name: string;
       uid: string;
-      user: {
-        avatar: {
-          images: any[];
-        };
-        username: string;
-      };
+      user: IUser;
       commentCount: number;
       viewCount: number;
     };

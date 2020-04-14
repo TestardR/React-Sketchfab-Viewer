@@ -4,6 +4,13 @@ import ModelItemStyles from './model-item.styles';
 import ModelItemInfo from '../model-item-info/model-item-info.component';
 import UserInfo from '../user-info/user-info.component';
 
+interface IUser {
+  avatar: {
+    images: any[];
+  };
+  username: string;
+}
+
 interface IProps {
   result: {
     name: string;
@@ -11,12 +18,7 @@ interface IProps {
       images: { url: string }[];
     };
     uid: string;
-    user: {
-      avatar: {
-        images: any[];
-      };
-      username: string;
-    };
+    user: IUser;
     commentCount: number;
     viewCount: number;
   };
